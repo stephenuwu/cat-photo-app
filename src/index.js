@@ -1,0 +1,1 @@
+var randomCat = require('random-cat')

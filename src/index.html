@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cat Photo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a class="brand-logo center">Cat Photo App</a>
+      </div>
+    </nav>
+    <br />
+    <a class="waves-effect waves-light btn center" id="generateBtn" onclick="generateImage()">Cat Photos Please</a>
+    <br />
+    <div>
+      <img id="imageId" class="centerImage">
+    </div>
+    <script>
+      var randomCat = require('random-cat');
+      var catImage = document.getElementById('imageId')
+
+      function generateImage(){
+        catImage.setAttribute('src', randomCat.get());
+      }
+
+    </script>
+  </body>
+</html>
